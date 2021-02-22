@@ -1,0 +1,745 @@
+<!DOCTYPE html>	
+<html>
+   <head>
+   	<meta charset="UTF-8">
+   	<meta name="description" content="This is an awesome webiste">
+     <style>
+     	#id5>td>div>span
+     	{
+     		display :none;
+     	}
+     </style>
+     	<title>
+     	Request For New PAN Card Or/And Changes Or Correction in PAN Data
+     	</title>
+
+     
+</head>
+<body bgcolor="#FFFFDD" leftmargin ="0" topmargin="0" onload=""onloading();disablePayment();disableTelNum();disablefieldSMother();checkAadhar();chechDOB();blinkName();blinkCardName();blinkFname();hide();showotherAddr();style>
+	<div class ="text-box blur">
+		<table border ="0" width="100%" cellpaddding="0" cellspacing="0" background ="/pan/images/TopHeaderbarYellowpart.gif" bgcolor="#FFCC00">
+			<tbody>
+				<tr bgcolor="#660000">
+					<td colspan="4" align="CENTER" background="/pan/images/RedBar.gif">
+						<b>
+							<font color="#FFFFFF">Request For New PAN Card Or/And Changes Or Correction in PAN Data</font>
+						</b>
+						<br>
+						<i>
+							<font color="#FFFFFF">Fields marked with</font>
+							<font color="RED">*</font>
+							<font color="#FFFFFF"> (asterisk are mandatory.</font>
+						</i>
+						<i><font color="#FFFFFF">To avoid mistake(s),please refer</font>
+							<font color="#FF9900">guidelines</font>
+							<font color="#FFFFF">and</font>
+							<font color="#FF9900">instructions</font>
+						</i>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<form method="POST" action="NewPanCorrectDSC" name="newPanCorrect">
+			<table border="1" cellpadding="0" cellspacing="0" width="100%">
+				<tbody>
+					<tr bgcolor="#e0e0e0">
+						<td>
+							<b></b>
+						</td>
+					</tr>
+					<tr>
+						<td>&nbsp;</td>
+						<td colspan="2"width="98%">
+							<b>
+								<font color="RED">*</font>
+								"Whether citizen of India"
+							</b>
+							"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Yes"
+							<input type="radio" name="PAN_CTZN_FLG" id="PAN_CTZN_FLG_YES" value="Y" onclick="patchDocuments();xhexkAadhar();returnfalse();changeTxt();">
+							"&nbsp;&nbsp;&nbsp;&nbsp;
+
+							No "
+							<input type="radio" name="PAN_CTZN_FLG" value="N" id="PAN_CTZN_FLG_NO" onclick="patchDocuments();checkAadhar();chechDOB();changeTxt();">
+						</td>
+					</tr>
+					<tr>
+						<td width="2%">&nbsp;</td>
+						<td colspan="2" width="98%">
+							<b>
+								<font color="RED">*</font>
+								"Permanent Account Number (PAN)"
+							</b>
+							<input type="text" name="PAN_NUM"value size="20" maxlength="10">
+						</td>
+					</tr>
+					<tr>
+						<td>
+						<input type="checkbox" name="PAN_MN_NM_CHK" value="Y">
+					</td>
+					<td colspan="2">
+						<b>
+							<font color="RED">*</font>
+							" 1. Name"
+						</b>
+						<font color="#0000FF">
+							<span id="nameInfoTxt" style="color: rgb(0,100,255);"></span>
+						</font>
+						 </td>
+						</tr>
+						<tr>
+							<td>&nbsp;</td>
+							<td colspan="2">
+								<b>Title</b>
+								"&nbsp;&nbsp;&nbsp;&nbsp;
+								Shri/Mr"
+								<input type="radio" name="PAN_MN_TITL" value="1">
+								"&nbsp;&nbsp;&nbsp;&nbsp;
+								Smt./Mrs."
+								<input type="radio" name="PAN_MN_TITL" value="2">
+								"
+								&nbsp;&nbsp;&nbsp;&nbsp;
+								Kumari/Ms"
+								<input type="radio" name="PAN_MN_TITL" value="3">
+								"&nbsp;&nbsp;&nbsp;&nbsp;
+								"
+								<font color="#a0a0a0d0d0d0">
+									M/s
+								</font>
+							</td>
+						</tr>
+						<tr>
+							<td>&nbsp;</td>
+							<td colspan="2">
+								<table width="100%" cellpadding="0" cellspacing="0">
+									<tbody>
+										<tr>
+											<td>
+												<b>
+													Last Name/Surname
+												</b>
+												<br>
+												<input type="text" name="PAN_LST_MN_NM" value="15" maxlength="25" onchange="fillFullName()">
+											</td>
+											<td>
+												<b>First Name</b>
+												<br>
+												<input type="text" name="PAN_FST_MN_NM" value size="15" maxlength="25" onchange="fillFullName()" onkeyup="fillFullName()">
+											</td>
+											<td>
+												<b>Middle Name</b>
+												<br>
+												<input type="text" name="PAN_MDL_MN_NM" value size="15" maxlength="25" onchange="fillFullName()" onkeyup="fillFullName()">
+											</td>
+										</tr>
+
+											
+											
+											
+										
+									</tbody>
+								</table>
+							</td>
+
+							
+					</tr>
+					<tr>
+					<td>&nbsp;</td>
+					<td colspan="2">
+						<font color="RED"><b>*</b>
+						</font>
+						<b>Name as you would it printed on the card</b>
+						<font color="#0000FF">
+							<span id="cardInfoTxt" style="color: rgb(0,100,255);">
+								"(Prefix like Shri,Smt,Kumari,Late,Dr,CA,Ms,Mrs,M/s,Alias etc. are not allowed)"
+							</span>
+						</font>
+					</td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+
+					<td colspan="2">
+						<input type="text" name="PAN_CRD_MN_NM" value size="40" maxlength="85">
+					</td>
+
+
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+					<td colspan="2">
+						<b>Details of Parents. </b>
+						<font color="#0000FF">
+							<span id="fmnameInfoTxt">
+								"(Prefix like Shri,Smt,Kumari,Late,Dr,CA,Ms,Mr,Mrs,M/s,Alias etc. are not allowed.)"
+							</span>
+						</font>
+
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+					<td>
+						<b>
+							"Whether mother is single parent and you wish to apply for PAN ny furnishing the name of your mother only"
+						</b>
+						<br>
+						<font color="#0000FF"></font>
+					</td>
+					<td colspan="2">
+						"Yes
+						  "
+						  <input type="radio" name="PAN_MTHR_NM_TO_PRINT_FLG" value="S" disabled="true" onclick="disablefieldSMother();">
+						  "
+						   No "
+						   <input type="radio" name="PAN_MTHR_NM_TO_PRINT_FLG" value checked _ onclick="disablefieldSMother();">
+						   <br>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input type="checkbox" name="PAN_FTHR_NM_CHK" value="Y">
+						</td>
+						<td colspan="2">
+							<b id="fname">
+								<font color="RED">*</font>
+								"Father's Name"
+							</b>
+							<font color ="#0000FF">
+								<span id="fnameInfoTxt" style="color:rgb(0,100.255);">(Mandatory Field.Even married women should given father's name only.)</span>
+							</font>
+						</td>
+					</tr>
+				<tr>
+					<td>&nbsp</td>
+					<td colspan="2">
+						<table width="100%" cellpadding="0" cellspacing="0">
+							<tbody>
+								<tr>
+									<td>
+										<b>Last Name/Surname</b>
+										<br>
+										<input type="text" name="PAN_LST_FTHR_NM" value id="FLName" size="15" maxlength="25">
+
+									</td>
+									<td>
+									<b>First Name</b>
+									<br>
+									<input type="text" name="PAN_FST_FTHR_NM" value id="FFName" size="15" maxlength="25">
+									</td>
+									<td>
+										<b>Middle Name</b>
+										<br>
+										<input type="text" name="PAN_MDL_FTHR_NM" size="15" maxlength="25">
+									</td>
+								</tr>
+
+									
+								
+							</tbody>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<input type="checkbox" name="PAN_MTHR_NM_CHK" value="Y">
+				</td>
+				<td colspan="2">
+					<b id="mname"></b>
+					<font color="#0000ff">
+						<span id="mnameInfoTxt" > Mother's Name(This field is optional.) </span>
+					</font>
+				</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td colspan="2">
+					<table width="100% cellpadding=0" cellspacing="0">
+						<tbody>
+							<tr>
+								<td>
+									<b>Last Nane/Surname</b>
+									<br>
+									<input type="text" name="PAN_LST_MTHR_NM" value size="15" maxlength="25">
+								</td>
+								<td>
+									<b>First Name</b>
+									<br>
+									<input type="text" name="PAN_FST_MTHR_NM" value size="15" maxlength="25>">
+								</td>
+								<td>
+									<b>Middle Name</b>
+									<br>
+									<input type="text" name="PAN_MDL_MTHR_NM" value size="15" maxlength="25">
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td>
+					<b>
+						<font color="RED">*</font>
+						"4.Select Parent name which is to be printed on the  card"
+
+					</b>
+					<br>
+					<font color="#0000FF">
+					<span id="pnameInfoTxt">
+						"(In case no option is provided then PAN card will be issued with father's name)"
+					</span>
+				</font>
+				</td>
+				<td>
+					"  
+					Fathers Name "
+					<input type="radio" name="PAN_MTHR_FTHR_NM_TO_PRINT_FLG" value = "F" checked id="Frname">
+					"   &nbsp;&nbsp;&nbsp;&nbsp;
+					Mother Name"
+					<input type="radio" name="PAN_MTHR_FTHR_NM_TO_PRINT_FLG" value="M" id="Mrname">
+					</td>
+					</tr>
+					<tr>
+						<td valign="TOP">
+							<input type="checkbox" name="PAN_BRTH_CHK" value="Y" id="PAN_BRTH_CHK">
+						</td>
+						<td>
+							<b>
+								<font color="RED">*</font>
+								"  5.Date of Birth/Incorporation/Agreement/Partnership  "
+								<br>
+								"  or Trust Deed/Formation of Body of Individuals/"
+								<br>
+								"  Association of Persons"
+							</b>
+						</td>
+						<td>
+							<table cellpadding="0" cellspacing="0" border="0">
+								<tbody>
+									<tr>
+										<td valign="TOP">
+											<font size="-1">DD</font>
+											<br>
+											<select name="PAN_DT_BRTH_DD">
+												<option value>DD</option>
+												<option value="01">1</option>
+												<option value="02">2</option>
+												<option value="03">3</option>
+												<option value="04">4</option>
+												<option value="05">5</option>
+												<option value="06">6</option>
+												<option value="07">7</option>
+												<option value="08">8</option>
+												<option value="09">9</option>
+												<option value="10">10</option>
+												<option value="11">11</option>
+												<option value="12">12</option>
+												<option value="13">13</option>
+												<option value="14">14</option>
+												<option value="15">15</option>
+												<option value="16">16</option>
+												<option value="17">17</option>
+												<option value="18">18</option>
+												<option value="19">19</option>
+												<option value="20">20</option>
+												<option value="21">21</option>
+												<option value="22">22</option>
+												<option value="23">23</option>
+												<option value="24">24</option>
+												<option value="25">25</option>
+												<option value="26">26</option>
+												<option value="27">27</option>
+												<option value="28">28</option>
+												<option value="29">29</option>
+												<option value="30">30</option>
+												<option value="31">31</option>
+											</select>
+											</td>
+											<td valign="TOP">
+											<font size="-1">MM</font>
+											<br>
+											<select name="PAN_DT_BRTH_MM">
+												<option value>MM</option>
+												<option value="01">JAN</option>
+												<option value="02">FEB</option>
+												<option value="03">MAR</option>
+												<option value="04">APR</option>
+												<option value="05">MAY</option>
+												<option value="06">JUN</option>
+												<option value="07">JUL</option>
+												<option value="08">AUG</option>
+												<option value="09">SEP</option>
+												<option value="10">OCT</option>
+												<option value="11">NOV</option>
+												<option value="12">DEC</option>
+											</select>
+											</td>
+											<td valign="TOP">
+											<font size="-1">YYYY</font>
+											<br>
+											<input type="text" name="PAN_DT_BRTH_YYYY" value size="4" maxlength="4">
+											</td>
+											
+										</tr>
+										</tbody>
+							</table>
+
+					
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="checkbox" name="PAN_SEX_CHK" value="Y">
+				</td>
+				<td>
+				<b>
+					<font color="RED">*</font>
+					"  6.Gender"
+				</b>
+			</td>
+			<td>
+				"  
+				      Male "
+				<input type="radio" name="PAN_SEX" value="M">
+				"&nbsp;&nbsp;&nbsp;&nbsp;
+				     Female"
+				     <input type="radio" name="PAN_SEX" value="F">
+				     "      &nbsp;&nbsp;&nbsp;&nbsp;
+				       Transgender"
+				       <input type="radio" name="PAN_SEX" value="T">
+				   </td>
+				   <td>
+				   </td>
+				</tr>
+				<tr>
+					<td>
+						<input type="checkbox" name="PAN_PHOTO_MIS_CHK" value="Y">
+					</td>
+					<td colspan="2">
+						<b>&nbsp;&nbsp;7. Photo Mismatch</b>
+					</td>
+				</tr>
+				<td>
+					<input type="checkbox" name="PAN_SIG_MIS_CHK" value="Y">
+					<td colspan="2">
+						<b>&nbsp;&nbsp; 8. Signature Mismatch</b>
+
+				</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="checkbox" name="PAN_CMNC_ADDR_CHK" value="Y" checked onclick="return false;">
+					</td>
+					<td>
+						<b>
+							<font color="RED">*</font>
+							9. Address for Communication
+						</b>
+					</td>
+					<td>
+						" Residential
+						  "
+						  <input type="radio" name="PAN_CMNC_ADDR_FLG" value="R" onclick="disablefield(this.value);patchAmount();patchDocuments();">
+						  "  
+						      &nbsp;&nbsp;&nbsp;&nbsp;
+						    Office  
+						   "
+						   <input type="radio" name="PAN_CMNC_ADDR_FLG" value="0" onclick="disablefield(this.value);patchAmount();patchDocumnets();">
+						</td>
+					</tr>
+					<tr>
+						<td>&nbsp;</td>
+						<td>
+							<span id="PAN_OFF_STYLE" style>
+								<b>Office Name</b>
+								<i>(to be filled only incase of office address)</i>
+
+							</span>
+						</td>
+						<td>
+							<input type="text" name="PAN_OFF_NM" value="30" maxlength="64">
+						</td>
+						</tr>
+							<TR>
+								<TD>&nbsp;</TD>
+								<TD COLSPAN=2><B>Residence Address</B></TD>
+							</TR>
+							<tr>
+								<td>&nbsp;</td>
+								<td>
+									<b>Flat/Door/Block No.</b>
+								</td>
+								<td>
+									<input type="text" name=PAN_R01_ADDR1" value size="25" maxlength="25" >
+								</td>
+							</tr>
+							<tr>
+								<td>&nbsp;</td>
+								<td>
+									<b>Name of Premises/Building/Village</b>
+								</td>
+							<td>
+								<input type="text" name="PAN_RO1_ADDR2" value size="25" maxlength="25">
+							</td>
+						</tr>
+						<tr>
+							<td>&nbsp;</td>
+							<td>
+								<b>Road/Street/Lane/Post Office</b>
+							</td>
+							<td>
+								<input type="text" name="PAN_R01_ADDR3" value size="25" maxlength="25">
+							</td>
+						</tr>
+						<tr>
+							<td>&nbsp</td>
+							<td>
+								<b>Area/Locality/Taluka/Sub-Division</b>
+							</td>
+							<td>
+								<input type="text" name="PAN_R01_ADDR4" value size="25" maxlength="25">
+							</td>
+						</tr>
+						<tr>
+							<td>&nbsp;</td>
+							<td>
+								<b>Town/City/District</b>
+							</td>
+							<td>
+								<input type="text" name="PAN_RO1_ADDR5" value size="25" maxlength="25">
+
+							</td>
+						</tr>
+						<tr>
+							<td>&nbsp;</td>
+							<td>
+							<b>State/Union Territory</b>
+						</td>
+						<td>
+							<select name="PAN_R01_STATE" onchange="patchPINcode('Ro1');patchAmount();patchDocuments();">
+								<option value>--Please Select</option>
+								<option value="1"> Andaman &Nicobar Islands</option>
+                                <option value="2"> Andhra pradesh</option>
+                                <option value="3"> Arunachal pradesh</option>
+                                <option value="4"> Assam</option>
+                                
+
+                               </select>
+							</td>
+						</tr>
+                        <tr>
+                        	<td>&nbsp;</td>
+                        	<td>
+                        		<b>PIN</b>
+                        		<i>(Indicating PIN is mandatory)</i>
+                        	</td>
+                        	<td>
+                        		<input type="text" name="PAN_RO1_PIN" value size="6" maxlength="6">
+                        	</td>
+
+                        </tr>
+                        <tr>
+                        	<td>&nbsp;</td>
+                        	<td>
+                        		<b>Country</b>
+                        	</td>
+                        	<td>
+                        		<select name="PAN_RO1_COUNTRY" id="selectPan_R_COUNTRY" disabled>
+                        			<option value="-1">--Please select--</option>
+                        			<option value="IN">India</option>
+                        		</select>
+                        	</td>
+                        </tr>
+                        <tr>
+                        	<td>&nbsp;</td>
+                        	<td>
+                        		<input type="text" name="PAN_RO1_ZIP" value size="6" maxlength="6" disabled>
+                        	</td>
+                        </tr>
+                        <tr>
+                        	<td>
+                        		<input type="checkbox" id="otherAddrchk" name="PAN_UPDATE_CHK" value="Y" onclick="showotherAddr()">
+                        	</td>
+                        	<td colspan="2">
+                        		<b>10.If you desire to update other address, give required details &</b>
+                        		<b>
+                        			<u> Submit proof of others address also
+                        				 
+                        			</u>
+                        			"
+                        			.
+                        			   "
+                        			</b>
+                        		</td>
+                        	</tr>
+                        	<tr>
+                        		<td colspan="3" id="tdoffAddr" style="display: none"></td>
+
+                        	</tr>
+                        	<!--
+                        		<TR>
+                        			<TD>&nbsp;</TD>
+                        			<TD COLSPAN=2><B>oofice address</B></TD>
+                        			</TR>
+                        		-->
+                        		<tr class="hidetr" style="display: none;">
+                        			<td>&nbsp;</td>
+                        			<td>
+                        				<span id="PAN_OFF1_STYLE" style>
+                        					<b>office Name</b>
+                        					<i> (to be filled only in the case of office address)</i>
+
+                        				</span>
+                        			</td>
+                        			<td>
+                        				<input type="text" name="PAN_OFF_NM1" value size="64" maxlength="64">
+                        			</td>
+                        		</tr>
+                        		<tr class="hidetr" style="display: none;">
+                        			<td>&nbsp</td>
+                        			<td>
+                        				<b>Flat/Door/Block No.</b>
+                        			</td>
+                        			<td>
+                        				<input type="text" name="PAN_RO2_ADDR1" value size="25" maxlength="25">
+
+                        			</td>
+                        		</tr>
+                        		<tr class="hidetr" style="display: none;">
+
+                                 <td>&nbsp</td>
+                                 <td>
+                                 	<b>Name of premises/Building/Village</b>
+                                 </td>
+                                 <td>
+                                 	<input type="text" name="PAN_RO2_ADDR2" value size="25" maxlength="25">
+                                 </td>
+                             </tr>
+                             <tr class="hidetr" style="display: none;
+                            ">
+                            <td>&nbsp;</td>
+                            <td>
+                            	<b>Road/Street/Lane/Post office</b>
+                            </td>
+                            <td>
+                            	<input type="text" name="PAN_RO2_ADDR3" value size="25" maxlength="25">
+                            </td>
+                        </tr>
+                        <tr class="hidetr" style="display: none;">
+                        	<td>&nbsp;</td>
+                        	<td>
+                        		<b>Area/Locality/Taluka/Sub-Division</b>
+                        	</td>
+                        	<td>
+                        		<input type="text" name="PAN_RO2_ADDR4" value size="25" maxlength="25">
+                        	</td>
+                        </tr>
+                        <tr class="hidetr" style="display: none;">
+                        	<td>&nbsp;</td>
+                        	<td>
+                        		<b>Town/City/District</b>
+                        	</td>
+                        	<td>
+                        		<input type="text" name="PAN_RO2_ADDR5">
+                        	</td>
+                        </tr>
+                        <tr class="hidetr" style="display: none;">
+                        	<td>&nbsp;</td>
+                        	<td>
+                        		<b>State/Union Territory</b>
+                        	</td>
+                        	<td>
+                        		<select name="PAN_RO2_STATE" onchange="patchPINcode('RO2');patchAmount();patchDocuments();">
+                        			<option value>--please select--</option>
+
+                        		</select>
+                        	</td>
+                        </tr>
+                        <tr>
+                        	<td>
+                        	<input type="checkbox" name="PAN_TEL_CHK" value="Y">
+                        </td>
+                        <td>
+                        	<b>
+                        		<font color="RED">*</font>
+                        		"  11. Telephone."
+                        	</b>
+                        	<br>
+                        	" 
+                        	     (country code is compulsory)"
+                        	 </td>
+                        	 <td>
+                        	 	<table border="1">
+                        	 		<tbody>
+                        	 			<tr>
+                        	 				<td width="100%" aligh="left" colspan="3">
+                        	 					<font size="-1">Country code(ISD code)</font>
+                        	 					<tr>
+                        	 						<td colspan="1">
+                        	 							<input type="radio" name="PAN_TEL_NUM_GRP" ID="panmobnum" value="M" onchange="disableTelNum();">
+                        	 							" Mobile No."
+                        	 				</td>
+                        	 				<td colspan="1">
+                        	 		<input type="radio" name="PAN_TEL_NUM_GRP" id="pantelnum" value="T" onchange="disabledTelNum();">
+                        	 " Telephone No"	
+                        	 </td>
+                        	 `				
+                        	 			</tr>
+                        	 		</tbody>
+                        </tr>
+
+
+                        		
+
+
+
+
+
+
+
+
+
+
+
+
+                        	
+
+
+                             	
+                                 
+
+
+
+
+
+
+
+                        		
+                        	
+
+                        
+							
+
+							
+							
+
+
+							
+
+					
+
+
+
+				</tbody>
+			
+		</form>
+
+
+	
+</body>
+   
+
+    
+     
+</html>
